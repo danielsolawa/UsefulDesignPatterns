@@ -1,3 +1,4 @@
+import builder.Person;
 import factory.Shape;
 import factory.ShapeFactory;
 import strategy.AnimalType;
@@ -35,5 +36,16 @@ public class Main {
         Shape circle = ShapeFactory.getShape("circle");
         circle.draw();
 
+
+        // Fluent Builder
+
+        Person person = Person.getBuilder()
+                .firstName("John")
+                .lastName("Smith")
+                .age(22)
+                .country("USA")
+                .build();
+
+        System.out.println(person);
     }
 }
