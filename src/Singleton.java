@@ -1,6 +1,6 @@
 /**
  *
- * This implementation is not thread safety!
+ * This implementation is not thread safe!
  */
 public class Singleton {
 
