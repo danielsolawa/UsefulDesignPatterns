@@ -5,5 +5,5 @@ package strategy;
  */
 public interface AnimalStrategy {
 
-     public String getType();
+      String getType();
 }

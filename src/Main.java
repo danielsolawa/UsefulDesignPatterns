@@ -1,3 +1,5 @@
+import factory.Shape;
+import factory.ShapeFactory;
 import strategy.AnimalType;
 import strategy.Cat;
 import strategy.Dog;
@@ -9,9 +11,9 @@ public class Main {
 
     public static void main(String[] args){
 
-        /*
-         * Strategy Pattern
-         */
+
+        //Strategy Pattern
+
         AnimalType animalType1 = new AnimalType();
         animalType1.setAnimalType(new Dog());
         System.out.println(animalType1.getAnimalType());
@@ -19,5 +21,19 @@ public class Main {
         AnimalType animalType2 = new AnimalType();
         animalType2.setAnimalType(new Cat());
         System.out.println(animalType2.getAnimalType());
+
+
+
+        //Factory Pattern
+
+        Shape triangle = ShapeFactory.getShape("triangle");
+        triangle.draw();
+
+        Shape rectangle = ShapeFactory.getShape("rectangle");
+        rectangle.draw();
+
+        Shape circle = ShapeFactory.getShape("circle");
+        circle.draw();
+
     }
 }
